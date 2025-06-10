@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: #fff8f9; /* fondo color claro */
+            background: #fff8f9;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             display: flex;
@@ -46,7 +46,7 @@
             flex-wrap: wrap;
             justify-content: center;
             max-width: 1000px;
-            display: none; /* oculto al inicio */
+            display: none;
         }
 
         .message {
@@ -55,7 +55,7 @@
             text-align: center;
             max-width: 600px;
             padding: 0 20px;
-            display: none; /* oculto al inicio */
+            display: none; 
         }
 
         .button {
@@ -83,7 +83,7 @@
 
         .audio-player {
             margin-top: 30px;
-            display: none; /* oculto al inicio */
+            display: none; 
         }
 
         .long-text {
@@ -93,7 +93,7 @@
             text-align: center;
             padding: 0 20px;
             color: #555;
-            display: none; /* oculto al inicio */
+            display: none; 
         }
     </style>
 </head>
@@ -138,11 +138,9 @@
             document.getElementById('audioPlayer').style.display = 'block';
             document.getElementById('longText').style.display = 'block';
             
-            // iniciar la musica
             var audio = document.getElementById('bgMusic');
             audio.play();
 
-            // opcional: deshabilitar el botón
             document.querySelector('.button').disabled = true;
             document.querySelector('.button').style.opacity = '0.6';
         }
