@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ✨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff8f9; /* fondo color claro */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            display: none; /* oculto al inicio */
+        }
+
+        .message {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 600px;
+            padding: 0 20px;
+            display: none; /* oculto al inicio */
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #ce93d8;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ba68c8;
+        }
+
+        .hidden-message {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #7b1fa2;
+            display: none;
+        }
+
+        .audio-player {
+            margin-top: 30px;
+            display: none; /* oculto al inicio */
+        }
+
+        .long-text {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            text-align: center;
+            padding: 0 20px;
+            color: #555;
+            display: none; /* oculto al inicio */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Para alguien que me ha hecho sonreír ✨</h1>
+
+    <button class="button" onclick="showSecret()">Me gustas mucho, mucho más de lo que crees</button>
+
+    <div class="cards-container" id="cardsContainer">
+        <div class="card">Tu risa me alegra el día.</div>
+        <div class="card">Tu carita no me dejo de pensarla.</div>
+        <div class="card">El futuro que quiero junto a ti me anima.</div>
+        <div class="card">Tu voz en inglés me hipnotiza.</div>
+        <div class="card">Tu forma de ser me inspira.</div>
+        <div class="card">Desde que te conocí jugando LoL, no dejo de pensar en ti.</div>
+    </div>
+
+    <div class="message" id="mainMessage">
+        No sé qué nos deparará este inicio, pero me alegra muchísimo haberte conocido.
+        Si alguna vez sonríes al leer esto, mi misión estará cumplida. 🌟
+    </div>
+
+    <div class="hidden-message" id="secretMessage">🌟 Me haría muy feliz seguir compartiendo momentos contigo, cuando lo veas y tengas tiempo marcame. 💕</div>
+
+    <div class="long-text" id="longText">
+        Agradezco haberme metido de chismoso en esa conversación la verdad, porque sino nunca pudiese haber conocido a una niña tan increíble como tú, sé que hace poco fue eso, pero la conexión que tuve contigo fue demasiado especial que no pude dejar de pensarte sinceramente y quiero poder estar contigo no solo en esta vida, no sé si sea exagerado o quizá muy intenso, pero el pensar al tenerte a mi lado y que tengamos muchas experiencias juntos me alegra mucho, (btw sí, estudié diseño web mi amor) realmente siento muy bonito al hablar, al escucharte, al pensarte, realmente me encantas mucho Daniela, y por eso cuando termines de leer todo esto, Márcame que quiero hacer algo &lt;3
+    </div>
+
+    <div class="audio-player" id="audioPlayer">
+        <audio controls autoplay loop id="bgMusic">
+            <source src="musica.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+    </div>
+
+    <script>
+        function showSecret() {
+            document.getElementById('cardsContainer').style.display = 'flex';
+            document.getElementById('mainMessage').style.display = 'block';
+            document.getElementById('secretMessage').style.display = 'block';
+            document.getElementById('audioPlayer').style.display = 'block';
+            document.getElementById('longText').style.display = 'block';
+            
+            // iniciar la musica
+            var audio = document.getElementById('bgMusic');
+            audio.play();
+
+            // opcional: deshabilitar el botón
+            document.querySelector('.button').disabled = true;
+            document.querySelector('.button').style.opacity = '0.6';
+        }
+    </script>
+</body>
+</html>
